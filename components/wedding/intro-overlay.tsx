@@ -27,15 +27,15 @@ export function IntroOverlay({ onComplete }: { onComplete: () => void }) {
           initial={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.5 }}
-          className="fixed inset-0 z-50 flex items-center justify-center bg-gradient-to-br from-[#8B0000] via-[#6B0000] to-[#4B0000] overflow-hidden"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-gradient-to-br from-[#E2856E] via-[#D36A50] to-[#B54D38] overflow-hidden"
         >
           {/* Background Mandala Pattern */}
           <div className="absolute inset-0 opacity-10">
             <svg className="w-full h-full" viewBox="0 0 800 800">
               <pattern id="mandalaPattern" x="0" y="0" width="200" height="200" patternUnits="userSpaceOnUse">
-                <circle cx="100" cy="100" r="80" fill="none" stroke="#D4AF37" strokeWidth="0.5" />
-                <circle cx="100" cy="100" r="60" fill="none" stroke="#D4AF37" strokeWidth="0.5" />
-                <circle cx="100" cy="100" r="40" fill="none" stroke="#D4AF37" strokeWidth="0.5" />
+                <circle cx="100" cy="100" r="80" fill="none" stroke="#800000" strokeWidth="0.5" />
+                <circle cx="100" cy="100" r="60" fill="none" stroke="#800000" strokeWidth="0.5" />
+                <circle cx="100" cy="100" r="40" fill="none" stroke="#800000" strokeWidth="0.5" />
                 {[...Array(8)].map((_, i) => (
                   <line
                     key={i}
@@ -43,7 +43,7 @@ export function IntroOverlay({ onComplete }: { onComplete: () => void }) {
                     y1="20"
                     x2="100"
                     y2="180"
-                    stroke="#D4AF37"
+                    stroke="#800000"
                     strokeWidth="0.5"
                     transform={`rotate(${i * 22.5} 100 100)`}
                   />
@@ -72,7 +72,7 @@ export function IntroOverlay({ onComplete }: { onComplete: () => void }) {
                   cy="100"
                   r="95"
                   fill="none"
-                  stroke="#D4AF37"
+                  stroke="#800000"
                   strokeWidth="2"
                   initial={{ pathLength: 0 }}
                   animate={{ pathLength: 1 }}
@@ -84,7 +84,7 @@ export function IntroOverlay({ onComplete }: { onComplete: () => void }) {
                   <motion.path
                     key={i}
                     d="M100,100 Q100,40 100,30 Q115,60 100,100"
-                    fill="#D4AF37"
+                    fill="#800000"
                     fillOpacity="0.8"
                     transform={`rotate(${i * 45} 100 100)`}
                     initial={{ scale: 0, opacity: 0 }}
@@ -98,7 +98,7 @@ export function IntroOverlay({ onComplete }: { onComplete: () => void }) {
                   <motion.path
                     key={`inner-${i}`}
                     d="M100,100 Q100,60 100,50 Q110,70 100,100"
-                    fill="#FFD700"
+                    fill="#800000"
                     fillOpacity="0.9"
                     transform={`rotate(${i * 45 + 22.5} 100 100)`}
                     initial={{ scale: 0, opacity: 0 }}
@@ -112,7 +112,7 @@ export function IntroOverlay({ onComplete }: { onComplete: () => void }) {
                   cx="100"
                   cy="100"
                   r="15"
-                  fill="#FFD700"
+                  fill="#800000"
                   initial={{ scale: 0 }}
                   animate={{ scale: 1 }}
                   transition={{ duration: 0.5, delay: 1.5 }}
@@ -121,7 +121,7 @@ export function IntroOverlay({ onComplete }: { onComplete: () => void }) {
                   cx="100"
                   cy="100"
                   r="8"
-                  fill="#8B0000"
+                  fill="#E2856E"
                   initial={{ scale: 0 }}
                   animate={{ scale: 1 }}
                   transition={{ duration: 0.3, delay: 1.8 }}
@@ -136,7 +136,7 @@ export function IntroOverlay({ onComplete }: { onComplete: () => void }) {
               transition={{ duration: 1, delay: 2 }}
               className="mt-8 text-center"
             >
-              <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl text-[#D4AF37] font-light tracking-wider">
+              <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl text-[#800000] font-light tracking-wider">
                 {"You're Invited"}
               </h1>
               <motion.p
@@ -156,16 +156,16 @@ export function IntroOverlay({ onComplete }: { onComplete: () => void }) {
             animate={{ opacity: 1 }}
             transition={{ delay: 1 }}
             onClick={handleSkip}
-            className="absolute bottom-8 right-8 px-6 py-2 text-[#D4AF37] border border-[#D4AF37]/50 rounded-full font-body text-sm tracking-wider hover:bg-[#D4AF37]/10 transition-colors"
+            className="absolute bottom-8 right-8 px-6 py-2 text-[#800000] border border-[#800000]/50 rounded-full font-body text-sm tracking-wider hover:bg-[#800000]/10 transition-colors"
           >
             Skip Intro
           </motion.button>
 
           {/* Decorative Corners */}
-          <div className="absolute top-4 left-4 w-16 h-16 border-t-2 border-l-2 border-[#D4AF37]/50" />
-          <div className="absolute top-4 right-4 w-16 h-16 border-t-2 border-r-2 border-[#D4AF37]/50" />
-          <div className="absolute bottom-4 left-4 w-16 h-16 border-b-2 border-l-2 border-[#D4AF37]/50" />
-          <div className="absolute bottom-4 right-4 w-16 h-16 border-b-2 border-r-2 border-[#D4AF37]/50" />
+          <div className="absolute top-4 left-4 w-16 h-16 border-t-2 border-l-2 border-[#800000]/50" />
+          <div className="absolute top-4 right-4 w-16 h-16 border-t-2 border-r-2 border-[#800000]/50" />
+          <div className="absolute bottom-4 left-4 w-16 h-16 border-b-2 border-l-2 border-[#800000]/50" />
+          <div className="absolute bottom-4 right-4 w-16 h-16 border-b-2 border-r-2 border-[#800000]/50" />
         </motion.div>
       )}
     </AnimatePresence>

@@ -8,7 +8,6 @@ const navItems = [
   { id: "save-the-date", label: "Save the Date" },
   { id: "events", label: "Events" },
   { id: "venue", label: "Venue" },
-  { id: "dress-code", label: "Dress Code" },
 ]
 
 export function Navigation() {
@@ -55,8 +54,8 @@ export function Navigation() {
       className={`
         fixed top-0 left-0 right-0 z-30
         transition-all duration-300
-        ${scrolled 
-          ? "bg-[#8B0000]/95 backdrop-blur-sm shadow-lg py-2" 
+        ${scrolled
+          ? "bg-[#FFCBA4]/95 backdrop-blur-sm shadow-lg py-2"
           : "bg-transparent py-4"
         }
       `}
@@ -71,10 +70,10 @@ export function Navigation() {
                 px-2 sm:px-4 py-2 font-heading text-xs sm:text-sm md:text-base tracking-wider
                 transition-all duration-300 rounded-full
                 ${activeSection === item.id
-                  ? "text-[#D4AF37] bg-[#D4AF37]/10"
+                  ? "text-[#800000] bg-[#800000]/10"
                   : scrolled
-                    ? "text-[#FFF8F0]/80 hover:text-[#D4AF37]"
-                    : "text-[#FFF8F0]/80 hover:text-[#D4AF37]"
+                    ? "text-[#800000]/80 hover:text-[#800000]"
+                    : "text-[#FFF8F0]/80 hover:text-[#800000]"
                 }
               `}
             >
@@ -83,12 +82,12 @@ export function Navigation() {
           ))}
         </div>
       </div>
-      
+
       {/* Gold accent line */}
-      <div 
+      <div
         className={`
           absolute bottom-0 left-0 right-0 h-px
-          bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent
+          bg-gradient-to-r from-transparent via-[#800000] to-transparent
           transition-opacity duration-300
           ${scrolled ? "opacity-100" : "opacity-0"}
         `}

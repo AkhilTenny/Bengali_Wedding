@@ -9,19 +9,19 @@ export function HeroSection() {
       className="relative min-h-screen flex items-center justify-center overflow-hidden texture-overlay"
     >
       {/* Background Gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#8B0000] via-[#6B0000] to-[#4B0000]" />
+      <div className="absolute inset-0 bg-gradient-to-br from-[#E2856E] via-[#D36A50] to-[#B54D38]" />
 
       {/* Couple Photo Background */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-80"
         style={{ backgroundImage: "url('/palace_hall_hero.png')" }}
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-[#8B0000]/70 via-transparent to-[#8B0000]/30" />
+      <div className="absolute inset-0 bg-gradient-to-t from-[#E2856E]/70 via-transparent to-[#E2856E]/30" />
 
       {/* Mandala Watermark */}
       <div className="absolute inset-0 flex items-center justify-center opacity-5">
         <svg className="w-[150%] h-[150%] max-w-none" viewBox="0 0 400 400">
-          <g fill="none" stroke="#D4AF37" strokeWidth="0.5">
+          <g fill="none" stroke="#800000" strokeWidth="0.5">
             {[...Array(12)].map((_, i) => (
               <circle
                 key={i}
@@ -45,12 +45,12 @@ export function HeroSection() {
       </div>
 
       {/* Decorative Border Frame */}
-      <div className="absolute inset-4 sm:inset-8 md:inset-12 border border-[#D4AF37]/30 pointer-events-none">
+      <div className="absolute inset-4 sm:inset-8 md:inset-12 border border-[#800000]/30 pointer-events-none">
         {/* Corner Ornaments */}
-        <div className="absolute -top-px -left-px w-12 h-12 sm:w-16 sm:h-16 border-t-2 border-l-2 border-[#D4AF37]" />
-        <div className="absolute -top-px -right-px w-12 h-12 sm:w-16 sm:h-16 border-t-2 border-r-2 border-[#D4AF37]" />
-        <div className="absolute -bottom-px -left-px w-12 h-12 sm:w-16 sm:h-16 border-b-2 border-l-2 border-[#D4AF37]" />
-        <div className="absolute -bottom-px -right-px w-12 h-12 sm:w-16 sm:h-16 border-b-2 border-r-2 border-[#D4AF37]" />
+        <div className="absolute -top-px -left-px w-12 h-12 sm:w-16 sm:h-16 border-t-2 border-l-2 border-[#800000]" />
+        <div className="absolute -top-px -right-px w-12 h-12 sm:w-16 sm:h-16 border-t-2 border-r-2 border-[#800000]" />
+        <div className="absolute -bottom-px -left-px w-12 h-12 sm:w-16 sm:h-16 border-b-2 border-l-2 border-[#800000]" />
+        <div className="absolute -bottom-px -right-px w-12 h-12 sm:w-16 sm:h-16 border-b-2 border-r-2 border-[#800000]" />
       </div>
 
       {/* Content */}
@@ -62,8 +62,8 @@ export function HeroSection() {
           transition={{ duration: 1, delay: 0.2 }}
           className="mb-6"
         >
-          <span className="text-5xl sm:text-6xl md:text-7xl text-[#D4AF37] font-heading animate-float inline-block">
-            ॐ
+          <span className="text-5xl sm:text-6xl md:text-7xl text-[#800000] font-heading animate-float inline-block">
+            <div className="w-10 h-10 bg-[#800000]" style={{ maskImage: "url('/genesh-logo.png')", maskSize: "contain", maskRepeat: "no-repeat", maskPosition: "center", WebkitMaskImage: "url('/genesh-logo.png')", WebkitMaskSize: "contain", WebkitMaskRepeat: "no-repeat", WebkitMaskPosition: "center" }} />
           </span>
         </motion.div>
 
@@ -72,7 +72,7 @@ export function HeroSection() {
           initial={{ scaleX: 0 }}
           animate={{ scaleX: 1 }}
           transition={{ duration: 1, delay: 0.4 }}
-          className="mx-auto mb-8 w-48 sm:w-64 h-px bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent"
+          className="mx-auto mb-8 w-48 sm:w-64 h-px bg-gradient-to-r from-transparent via-[#800000] to-transparent"
         />
 
         {/* Names and Couple Photo */}
@@ -86,7 +86,7 @@ export function HeroSection() {
           <h1 className="font-heading text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-[#FFF8F0] font-bold tracking-wide leading-tight drop-shadow-[0_4px_8px_rgba(0,0,0,0.5)] text-center">
             <span className="block sm:inline text-shadow-lg">Jiya</span>
             <span className="block my-3 sm:my-0 sm:mx-6 text-4xl sm:text-5xl md:text-6xl">
-              <span className="text-[#D4AF37] animate-pulse drop-shadow-[0_0_10px_rgba(212,175,55,0.8)]">Weds</span>
+              <span className="text-[#800000] animate-pulse drop-shadow-[0_0_10px_rgba(212,175,55,0.8)]">Weds</span>
             </span>
             <span className="block sm:inline text-shadow-lg">Arnob</span>
           </h1>
@@ -105,7 +105,7 @@ export function HeroSection() {
           </motion.div>
 
           {/* Hashtag */}
-          <h2 className="mt-4 text-[#D4AF37] font-heading text-2xl sm:text-3xl tracking-[0.2em] font-bold drop-shadow-md">
+          <h2 className="mt-4 text-[#800000] font-heading text-2xl sm:text-3xl tracking-[0.2em] font-bold drop-shadow-md">
             #ARJIYA
           </h2>
         </motion.div>
@@ -132,7 +132,7 @@ export function HeroSection() {
           initial={{ scaleX: 0 }}
           animate={{ scaleX: 1 }}
           transition={{ duration: 1, delay: 1.2 }}
-          className="mx-auto mt-8 w-48 sm:w-64 h-px bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent"
+          className="mx-auto mt-8 w-48 sm:w-64 h-px bg-gradient-to-r from-transparent via-[#800000] to-transparent"
         />
 
         {/* Scroll Indicator */}
@@ -145,7 +145,7 @@ export function HeroSection() {
           <motion.div
             animate={{ y: [0, 10, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
-            className="text-[#D4AF37]/60 text-sm font-body tracking-wider flex flex-col items-center gap-2"
+            className="text-[#800000]/60 text-sm font-body tracking-wider flex flex-col items-center gap-2"
           >
             <span>Scroll Down</span>
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

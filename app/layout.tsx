@@ -10,6 +10,8 @@ const cormorantGaramond = Cormorant_Garamond({
   display: 'swap',
 })
 
+
+
 const libreBaskerville = Libre_Baskerville({
   subsets: ['latin'],
   weight: ['400', '700'],
@@ -47,6 +49,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${cormorantGaramond.variable} ${libreBaskerville.variable} bg-background scroll-smooth`}>
+
       <body className="font-body antialiased">
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}

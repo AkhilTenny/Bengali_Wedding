@@ -15,10 +15,10 @@ interface Petal {
 const colors = [
   "#C0392B", // Red
   "#E74C3C", // Light Red
-  "#D4AF37", // Gold
+  "#800000", // Gold
   "#FFB6C1", // Light Pink
   "#FF69B4", // Hot Pink
-  "#8B0000", // Dark Red
+  "#E2856E", // Dark Red
 ]
 
 export function FloatingPetals() {

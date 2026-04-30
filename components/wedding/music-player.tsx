@@ -38,39 +38,39 @@ export function MusicPlayer() {
       transition={{ delay: 0.5, duration: 0.5 }}
       className="fixed top-4 right-4 z-40"
     >
-      <audio ref={audioRef} src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/hindu-theme_music-K7v3zcCdqrTzDgxxZN7FdZ1SZEokDw.mp3" loop preload="auto" />
-      
+      <audio ref={audioRef} src="/genesh-audio.mp3" loop preload="auto" />
+
       <button
         onClick={togglePlay}
         disabled={!isLoaded}
         className={`
           relative w-12 h-12 rounded-full 
-          bg-gradient-to-br from-[#8B0000] to-[#6B0000]
-          border-2 border-[#D4AF37]
+          bg-gradient-to-br from-[#E2856E] to-[#D36A50]
+          border-2 border-[#800000]
           flex items-center justify-center
           transition-all duration-300
-          hover:scale-110 hover:shadow-lg
+          hover:scale-110 hover:shadow-lg mt-6
           disabled:opacity-50 disabled:cursor-not-allowed
           ${isPlaying ? 'animate-pulse-glow' : ''}
         `}
         aria-label={isPlaying ? "Pause music" : "Play music"}
       >
         {/* Musical Note Icon */}
-        <span className="text-xl text-[#D4AF37]">
+        <span className="text-xl text-[#800000]">
           {isPlaying ? "🎵" : "🎶"}
         </span>
-        
+
         {/* Pulsing Ring Animation when playing */}
         {isPlaying && (
           <>
             <motion.span
-              className="absolute inset-0 rounded-full border-2 border-[#D4AF37]"
+              className="absolute inset-0 rounded-full border-2 border-[#800000]"
               initial={{ scale: 1, opacity: 1 }}
               animate={{ scale: 1.5, opacity: 0 }}
               transition={{ duration: 1.5, repeat: Infinity }}
             />
             <motion.span
-              className="absolute inset-0 rounded-full border-2 border-[#D4AF37]"
+              className="absolute inset-0 rounded-full border-2 border-[#800000]"
               initial={{ scale: 1, opacity: 1 }}
               animate={{ scale: 1.5, opacity: 0 }}
               transition={{ duration: 1.5, repeat: Infinity, delay: 0.5 }}

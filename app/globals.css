@@ -16,14 +16,14 @@
   --secondary-foreground: #FFF8F0;
   --muted: #F5E6D3;
   --muted-foreground: #5C4033;
-  --accent: #D4AF37;
+  --accent: #800000;
   --accent-foreground: #2C1810;
   --destructive: #B22222;
   --destructive-foreground: #FFF8F0;
-  --border: #D4AF37;
+  --border: #800000;
   --input: #E8D5C4;
-  --ring: #D4AF37;
-  --gold: #D4AF37;
+  --ring: #800000;
+  --gold: #800000;
   --gold-light: #FFD700;
   --crimson: #8B0000;
   --crimson-light: #C0392B;

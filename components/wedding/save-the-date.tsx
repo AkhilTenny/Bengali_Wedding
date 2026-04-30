@@ -23,7 +23,7 @@ export function SaveTheDate() {
 
   useEffect(() => {
     setMounted(true)
-    
+
     const calculateTimeLeft = () => {
       const now = new Date().getTime()
       const difference = weddingDate - now
@@ -59,10 +59,10 @@ export function SaveTheDate() {
       <div className="absolute inset-0 opacity-5">
         <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
           <pattern id="lotusPattern" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-            <path d="M10,2 Q12,6 10,10 Q8,6 10,2" fill="#8B0000" />
-            <path d="M10,18 Q12,14 10,10 Q8,14 10,18" fill="#8B0000" />
-            <path d="M2,10 Q6,12 10,10 Q6,8 2,10" fill="#8B0000" />
-            <path d="M18,10 Q14,12 10,10 Q14,8 18,10" fill="#8B0000" />
+            <path d="M10,2 Q12,6 10,10 Q8,6 10,2" fill="#E2856E" />
+            <path d="M10,18 Q12,14 10,10 Q8,14 10,18" fill="#E2856E" />
+            <path d="M2,10 Q6,12 10,10 Q6,8 2,10" fill="#E2856E" />
+            <path d="M18,10 Q14,12 10,10 Q14,8 18,10" fill="#E2856E" />
           </pattern>
           <rect width="100%" height="100%" fill="url(#lotusPattern)" />
         </svg>
@@ -77,11 +77,11 @@ export function SaveTheDate() {
           transition={{ duration: 0.8 }}
           className="text-center mb-12"
         >
-          <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl text-[#8B0000] mb-4">
+          <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl text-[#E2856E] mb-4">
             Save the Date
           </h2>
           <div className="decorative-divider max-w-xs mx-auto">
-            <span className="text-[#D4AF37] text-2xl">✦</span>
+            <span className="text-[#800000] text-2xl">✦</span>
           </div>
         </motion.div>
 
@@ -98,17 +98,17 @@ export function SaveTheDate() {
             <svg className="w-20 h-12" viewBox="0 0 80 48">
               <path
                 d="M40,4 Q50,20 40,44 Q30,20 40,4"
-                fill="#D4AF37"
+                fill="#ffd900ff"
                 opacity="0.9"
               />
               <path
                 d="M25,12 Q40,24 40,44 Q20,24 25,12"
-                fill="#D4AF37"
+                fill="#800000"
                 opacity="0.7"
               />
               <path
                 d="M55,12 Q40,24 40,44 Q60,24 55,12"
-                fill="#D4AF37"
+                fill="#800000"
                 opacity="0.7"
               />
             </svg>
@@ -131,8 +131,8 @@ export function SaveTheDate() {
                 transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
                 className="relative"
               >
-                <div className="bg-gradient-to-br from-[#8B0000] to-[#6B0000] rounded-lg p-4 sm:p-6 text-center gold-frame">
-                  <span className="font-heading text-3xl sm:text-4xl md:text-5xl text-[#D4AF37] block">
+                <div className="bg-gradient-to-br from-[#E2856E] to-[#D36A50] rounded-lg p-4 sm:p-6 text-center gold-frame">
+                  <span className="font-heading text-3xl sm:text-4xl md:text-5xl text-[#800000] block">
                     {mounted ? String(unit.value).padStart(2, "0") : "--"}
                   </span>
                   <span className="font-body text-[#FFF8F0]/80 text-xs sm:text-sm uppercase tracking-wider mt-1 block">
@@ -144,7 +144,7 @@ export function SaveTheDate() {
           </div>
 
           <div className="text-center mt-8">
-            <p className="font-heading text-xl sm:text-2xl text-[#8B0000]">
+            <p className="font-heading text-xl sm:text-2xl text-[#E2856E]">
               12<sup>th</sup> July 2026 • Sunday
             </p>
             <p className="font-body text-[#5C4033] mt-2">
@@ -165,10 +165,10 @@ export function SaveTheDate() {
             <path
               d="M0,16 Q32,0 64,16 Q96,32 128,16"
               fill="none"
-              stroke="#D4AF37"
+              stroke="#800000"
               strokeWidth="1"
             />
-            <circle cx="64" cy="16" r="4" fill="#D4AF37" />
+            <circle cx="64" cy="16" r="4" fill="#800000" />
           </svg>
         </motion.div>
       </div>
