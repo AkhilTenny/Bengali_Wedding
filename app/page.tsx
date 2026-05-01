@@ -23,6 +23,9 @@ export default function WeddingInvitation() {
 
   return (
     <main className="min-h-screen bg-[#FFF8F0]">
+      {/* Global Background Audio */}
+      <audio id="wedding-bg-audio" src="/genesh-audio.mp3" loop preload="auto" />
+
       {/* Intro Animation Overlay */}
       {showIntro && <IntroOverlay onComplete={handleIntroComplete} />}
 
@@ -30,7 +33,7 @@ export default function WeddingInvitation() {
       {showContent && (
         <>
           {/* Music Player */}
-          <MusicPlayer />
+          <MusicPlayer variant="main" />
 
           {/* Navigation */}
           <Navigation />

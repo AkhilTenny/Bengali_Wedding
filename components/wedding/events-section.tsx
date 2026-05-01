@@ -75,23 +75,21 @@ export function EventsSection() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: i * 0.1 }}
-              className={`relative mb-8 pl-12 md:pl-0 md:w-[calc(50%-2rem)] ${
-                i % 2 === 0 ? "md:mr-auto md:text-right" : "md:ml-auto md:text-left"
-              }`}
+              className={`relative mb-8 pl-12 md:pl-0 md:w-[calc(50%-2rem)] ${i % 2 === 0 ? "md:mr-auto md:text-right" : "md:ml-auto md:text-left"
+                }`}
             >
               {/* Connector Dot */}
               <div
-                className={`absolute left-[13px] md:top-1/2 md:-translate-y-1/2 ${
-                  i % 2 === 0
-                    ? "md:left-auto md:right-[-2rem] md:translate-x-[calc(100%+0.5rem)]"
-                    : "md:left-[-2rem] md:-translate-x-[calc(100%-0.5rem)]"
-                }`}
+                className={`absolute left-[13px] md:top-1/2 md:-translate-y-1/2 ${i % 2 === 0
+                  ? "md:left-auto md:right-[-2rem] md:translate-x-[calc(100%+0.5rem)]"
+                  : "md:left-[-2rem] md:-translate-x-[calc(100%-0.5rem)]"
+                  }`}
               >
                 <div className="w-4 h-4 rounded-full bg-[#800000] border-2 border-[#FFF8F0] shadow-lg absolute top-6 md:top-auto md:relative z-10" />
               </div>
 
               <div className="gold-frame bg-gradient-to-br from-[#E2856E] to-[#D36A50] rounded-xl p-6 relative overflow-hidden group hover:shadow-xl transition-all duration-300">
-                <h3 className="font-heading text-xl sm:text-2xl text-[#800000] mb-2">
+                <h3 className="font-heading text-2xl sm:text-3xl font-bold text-[#800000] mb-2">
                   {event.title}
                 </h3>
 
