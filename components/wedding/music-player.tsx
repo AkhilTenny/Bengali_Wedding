@@ -2,6 +2,8 @@
 
 import { useState, useRef, useEffect } from "react"
 import { motion } from "framer-motion"
+import { Music, Music2 } from 'lucide-react';
+
 
 export function MusicPlayer({ variant = 'intro' }: { variant?: 'intro' | 'main' }) {
   const [isPlaying, setIsPlaying] = useState(false)
@@ -90,7 +92,8 @@ export function MusicPlayer({ variant = 'intro' }: { variant?: 'intro' | 'main' 
       >
         {/* Musical Note Icon */}
         <span className={variant === 'intro' ? "text-4xl text-red-800" : "text-xl text-red-800"}>
-          {isPlaying ? "hai" : "Hello"}
+          {variant === 'intro' ? isPlaying ? <Music size={48} /> : <Music2 size={48} /> : isPlaying ? <Music size={24} /> : <Music2 size={24} />}
+
         </span>
 
         {/* Pulsing Ring Animation when playing */}
