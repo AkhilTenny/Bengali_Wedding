@@ -2,8 +2,6 @@
 
 import { useState, useRef, useEffect } from "react"
 import { motion } from "framer-motion"
-import { FaMusic } from "react-icons/fa";
-import { MdMusicOff } from "react-icons/md";
 
 export function MusicPlayer({ variant = 'intro' }: { variant?: 'intro' | 'main' }) {
   const [isPlaying, setIsPlaying] = useState(false)
@@ -92,7 +90,7 @@ export function MusicPlayer({ variant = 'intro' }: { variant?: 'intro' | 'main' 
       >
         {/* Musical Note Icon */}
         <span className={variant === 'intro' ? "text-4xl text-red-800" : "text-xl text-red-800"}>
-          {isPlaying ? <FaMusic /> : <MdMusicOff />}
+          {isPlaying ? "hai" : "Hello"}
         </span>
 
         {/* Pulsing Ring Animation when playing */}
