@@ -6,12 +6,22 @@ import { motion } from "framer-motion"
 export function MusicPlayer() {
   const [isPlaying, setIsPlaying] = useState(false)
   const [isLoaded, setIsLoaded] = useState(false)
+  const [showText, setShowText] = useState(true)
   const audioRef = useRef<HTMLAudioElement>(null)
 
   useEffect(() => {
     if (audioRef.current) {
       audioRef.current.volume = 0.5
       setIsLoaded(true)
+    }
+  }, [])
+
+  useEffect(() => {
+    if (showText) {
+      const timer = setTimeout(() => {
+        setShowText(false)
+      }, 8000)
+      return () => clearTimeout(timer);
     }
   }, [])
 
@@ -31,6 +41,8 @@ export function MusicPlayer() {
     }
   }
 
+  console.log(showText)
+
   return (
     <motion.div
       initial={{ opacity: 0, x: 50 }}
@@ -44,7 +56,7 @@ export function MusicPlayer() {
         onClick={togglePlay}
         disabled={!isLoaded}
         className={`
-          relative w-12 h-12 rounded-full 
+          relative w-14 h-14 rounded-full mr-2
           bg-gradient-to-br from-[#E2856E] to-[#D36A50]
           border-2 border-[#800000]
           flex items-center justify-center
@@ -78,6 +90,11 @@ export function MusicPlayer() {
           </>
         )}
       </button>
+      {!isPlaying && showText && (
+        <div className="absolute top-21 px-2 right-0 z-40 w-29 bg-[#FFCBA4]/95 transition-all fade-in duration-300 bg-transparent backdrop-blur-sm rounded-full">
+          <p className="text-[#800000] font-heading text-sm">Tap to play music</p>
+        </div>
+      )}
     </motion.div>
   )
 }
